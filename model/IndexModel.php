@@ -1,6 +1,5 @@
 <?php
-include_once('./entity/User.php');
-require_once('./api/TwitterAPIExchange.php');
+//require_once('./api/TwitterAPIExchange.php');
 
 class TweetModel{
 	public function __construct($settings){
