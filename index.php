@@ -8,8 +8,6 @@ $settings = array(
     'consumer_secret' => "YOUR_CONSUMER_SECRET"
 );
 
-var_dump($settings);
-die;
 if(empty($_GET['controller'])){
 	$controller='MainController';
 
