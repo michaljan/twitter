@@ -1,6 +1,6 @@
 <?php
-require_once('./controller/IndexController.php');
-require_once('./view/View.php'); 
+//require_once('./controller/IndexController.php');
+//require_once('./view/View.php'); 
 $settings = array(
     'oauth_access_token' => "YOUR_OAUTH_ACCESS_TOKEN",
     'oauth_access_token_secret' => "YOUR_OAUTH_ACCESS_TOKEN_SECRET",
