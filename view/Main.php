@@ -28,7 +28,7 @@
  
   <body>
 	<div class="row">
-		<div class="col-md-4">
+		<div class="col-md-2">
 			<ul class="nav nav-pills nav-stacked">
 				<li class="active"><a href="./index.php?controller=MainController">Home</a></li>
 				<li><a href="./index.php?controller=ByDateController">Sort by date</a></li>
