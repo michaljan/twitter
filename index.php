@@ -13,6 +13,7 @@ $settings = array(
 if(empty($_GET['controller'])){
 	$controller='MainController';
         var_dump($controller);
+        die;
 
 }
 else{
