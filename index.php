@@ -18,6 +18,6 @@ else{
 
 if(class_exists($controller)){   
 	$mainController= new $controller;
-	$mainController->execute($settimgs,$_REQUEST);
+	$mainController->execute($settings,$_REQUEST);
 	$mainController->render();
 }
