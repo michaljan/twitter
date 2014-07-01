@@ -9,7 +9,7 @@ $settings = array(
 );
 
 var_dump($controller);
-die;
+die
 if(empty($_GET['controller'])){
 	$controller='MainController';
         var_dump($controller);
