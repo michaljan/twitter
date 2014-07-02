@@ -14,10 +14,7 @@ class TweetModel{
                 ->buildOauth($url, $method)
                 ->performRequest();
         $respond = json_decode($json,true);
-        foreach ($respond as $key => $row) {
-            $created[$key] = $row['created_at'];
-            $text[$key] = $row['text'];
-        }
+        asort($respond,"created_at");
         print_r($respond);
         die;
         $data=array('created'=>$created,'text'=>$text);
