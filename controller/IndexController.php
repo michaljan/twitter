@@ -32,7 +32,7 @@ class ByDateController implements iController{
 		$tweet=new TweetModel($settings);
 		$url = 'https://api.twitter.com/1.1/followers/ids.json';
 		$method='GET';
-                $getfield='?screen_name=J7mbo';
+                $getfield='?screen_name=fabianwilliams';
 		$data=$tweet->byDateAction($url,$method, $getfield);
 		$view=new View('./view/Main.php');
 		$this->view=$view;
