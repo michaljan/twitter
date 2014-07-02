@@ -46,7 +46,6 @@
                         <?php 
                             $i=1;
                             foreach($this->data['data'] as $value){
-                                var_dump($value);
                                 echo '<tr><td>'.$i.'<td>'.$value['created_at'].'<td>'.$value['created_at'].'<td><tr>';
                             $i++;
                             
