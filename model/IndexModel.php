@@ -17,6 +17,7 @@ class TweetModel{
         //asort($respond, "mySortByDate");
         foreach($respond as $key=>$value){
             $date[$key]=new DateTime($value['created_at']);
+            $post[$key]=$value['text'];
         }
         
         echo '<pre>';
