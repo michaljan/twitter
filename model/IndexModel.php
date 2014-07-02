@@ -19,10 +19,7 @@ class TweetModel{
             $text[$key] = $row['text'];
         }
         array_multisort($created, $text);
-        var_dump($created,$text);
-        die;
-        
+        $data=array('created'=>$created,'text'=>$text);
+        return $data;
     }
-    
-
 }
