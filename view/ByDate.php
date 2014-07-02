@@ -35,6 +35,23 @@
 				<li><a href="#">Messages</a></li>
 			</ul>
 		</div>
+            <div class="col-md-6">
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th>#</th><th>Date</th><th>Post</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <?php foreach($data as $value){
+                                foreach($value as $key=>$row){
+                                    echo '<tr><td>'.$key.'</td>'.'<td>'.$row['created'].'</td> <td>'.$row['created'].'</td></tr>';
+                                }
+                        }
+                        ?>
+                    </tbody>
+                </table>
+            </div>
 	</div>		
   </body>
 </html>
