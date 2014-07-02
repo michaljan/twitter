@@ -43,7 +43,7 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <?php foreach($data as $value){
+                        <?php foreach($this->data as $value){
                                 foreach($value as $key=>$row){
                                     echo '<tr><td>'.$key.'</td>'.'<td>'.$row['created'].'</td> <td>'.$row['created'].'</td></tr>';
                                 }
