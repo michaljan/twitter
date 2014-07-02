@@ -15,7 +15,7 @@ class TweetModel{
                 ->performRequest();
         $respond = json_decode($json,true);
         asort($respond,"created_at");
-        print_r($respond);
+        var_dump($respond);
         die;
         $data=array('created'=>$created,'text'=>$text);
         return $data;
