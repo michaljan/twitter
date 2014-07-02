@@ -13,10 +13,10 @@ class TweetModel{
         $json = $this->twitter->buildOauth($url, $method)
                 ->performRequest();
         $respond = json_decode($json);
-        foreach ($respond as $key => $row) {
-            $created[$key] = $row['created_at'];
-            $text[$key] = $row['text'];
-        }
+        //foreach ($respond as $key => $row) {
+        //    $created[$key] = $row['created_at'];
+        //    $text[$key] = $row['text'];
+        //}
         var_dump($respond);
         die;
         array_multisort($created, $text);
