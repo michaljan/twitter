@@ -23,6 +23,7 @@ class TweetModel{
         if ($a == $b) {
             return 0;
         }
+        echo '<pre>';
         var_dump($a);
         var_dump($b);
         die;
