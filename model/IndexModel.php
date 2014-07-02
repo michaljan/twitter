@@ -27,8 +27,8 @@ class TweetModel{
         var_dump($b);
         return $a< $b ? -1 : 1;
          };
-        var_dump($respond); 
-        uksort($respond,'cmp');
+        //var_dump($respond); 
+        uasort($respond,'cmp');
         echo '<pre>';
         die;
         return $respond;
