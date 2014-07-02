@@ -14,7 +14,7 @@ class TweetModel{
                 ->buildOauth($url, $method)
                 ->performRequest();
         $respond = json_decode($json,true);
-        asort($respond, "mySortByDate");
+        //asort($respond, "mySortByDate");
         echo '<pre>';
         print_r($respond);
         die;
