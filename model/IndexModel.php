@@ -14,10 +14,13 @@ class TweetModel{
                 ->buildOauth($url, $method)
                 ->performRequest();
         $respond = json_decode($json,true);
-        asort($respond,"created_at");
+        asort($respond, $this->mySortByDate);
         var_dump($respond);
         die;
-        $data=array('created'=>$created,'text'=>$text);
-        return $data;
+        return $respond;
+    }
+    
+    public function mySortByDate($val1,$val2){
+        return $val1['created_at']>$val2['created_at'];
     }
 }
