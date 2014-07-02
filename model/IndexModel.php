@@ -30,8 +30,8 @@ class TweetModel{
         //var_dump($respond); 
         uasort($respond,'cmp');
         
-       foreach($respond as $key=>$value){
-            echo new DateTime($value['created_at']);
+       foreach($respond as $value){
+            echo $value['created_at'];
             echo '<pre>';
         //    $post[$key]=$value['text'];
        } 
