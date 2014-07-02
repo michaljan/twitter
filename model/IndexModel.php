@@ -13,7 +13,7 @@ class TweetModel{
         $json = $this->twitter->setGetfield($getfield)
                 ->buildOauth($url, $method)
                 ->performRequest();
-        $respond = json_decode($json);
+        $respond = json_decode($json,true);
         foreach ($respond as $key => $row) {
             $created[$key] = $row['created_at'];
             $text[$key] = $row['text'];
