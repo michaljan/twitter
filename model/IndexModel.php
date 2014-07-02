@@ -28,7 +28,7 @@ class TweetModel{
         return $a < $b ? -1 : 1;
          };
         uasort($respond,'cmp');
-        var_dump($respond);
+        var_dump($respond['created_at']);
         die;
         return $respond;
     }
