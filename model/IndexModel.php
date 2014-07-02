@@ -9,8 +9,9 @@ class TweetModel{
         return $this;
     }
 
-    public function byDateAction($url, $method) {
-        $json = $this->twitter->buildOauth($url, $method)
+    public function byDateAction($url, $method, $getfield) {
+        $json = $this->twitter->setGetfield($getfield)
+                ->buildOauth($url, $method)
                 ->performRequest();
         $respond = json_decode($json);
         //foreach ($respond as $key => $row) {

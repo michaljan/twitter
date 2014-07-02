@@ -32,7 +32,8 @@ class ByDateController implements iController{
 		$tweet=new TweetModel($settings);
 		$url = 'https://api.twitter.com/1.1/statuses/mentions_timeline.json';
 		$method='GET';
-		$data=$tweet->byDateAction($url,$method);
+                $getfield='?screen_name=michal_janicki0';
+		$data=$tweet->byDateAction($url,$method, $getfield);
 		$view=new View('./view/Main.php');
 		$this->view=$view;
 		$this->view->setData('byDate',$data);
