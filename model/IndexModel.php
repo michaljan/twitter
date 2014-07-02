@@ -27,15 +27,7 @@ class TweetModel{
         }
         return $a < $b ? -1 : 1;
          };
-        //var_dump($respond); 
         uasort($respond,'cmp');
-        
-       foreach($respond as $value){
-            echo $value['created_at'];
-            echo '<pre>';
-        //    $post[$key]=$value['text'];
-       } 
-        die;
         return $respond;
     }
     
