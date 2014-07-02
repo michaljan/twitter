@@ -1,5 +1,5 @@
 <?php
-//require_once('./api/TwitterAPIExchange.php');
+require_once('./api/TwitterAPIExchange.php');
 
 class TweetModel{
 	public function __construct($settings){
