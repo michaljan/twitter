@@ -28,10 +28,6 @@ class TweetModel{
         return $a < $b ? -1 : 1;
          };
         uasort($respond,'cmp');
-        foreach ($respond as $value){
-            echo $value['created_at'];
-        }
-        die;
         return $respond;
     }
     
