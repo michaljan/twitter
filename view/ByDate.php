@@ -46,7 +46,7 @@
                         <?php 
                             $i=1;
                             foreach($this->data['data'] as $value){
-                                echo '<tr><td>'.$i.'<td>'.$value['created_at'].'<td>'.$value['created_at'].'<td><tr>';
+                                echo '<tr><td>'.$i.'<td>'.$value['created_at'].'<td>'.$value['text'].'<td><tr>';
                             $i++;
                             
                         }
