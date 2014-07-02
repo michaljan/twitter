@@ -20,7 +20,7 @@ class TweetModel{
         }
         
         echo '<pre>';
-        print_r($date['date']);
+        print_r($date);
         die;
         return $respond;
     }
