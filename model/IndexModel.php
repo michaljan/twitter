@@ -15,7 +15,8 @@ class TweetModel{
                 ->performRequest();
         $respond = json_decode($json,true);
         asort($respond, "mySortByDate");
-        var_dump($respond);
+        echo '<pre>';
+        print_r($respond);
         die;
         return $respond;
     }
