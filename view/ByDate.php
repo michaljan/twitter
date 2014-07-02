@@ -43,8 +43,9 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <?php foreach($this->data['created'] as $value){
-                            echo $value;
+                        <?php foreach($this->data as $value){
+                            var_dump($value);
+                            //echo $value;
                         }
                         ?>
                     </tbody>
