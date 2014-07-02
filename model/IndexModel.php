@@ -15,8 +15,12 @@ class TweetModel{
                 ->performRequest();
         $respond = json_decode($json,true);
         //asort($respond, "mySortByDate");
+        foreach($respond as $key=>$value){
+            $date['date']=new DateTime($value['created_at']);
+        }
+        
         echo '<pre>';
-        print_r($respond);
+        print_r($date['date']);
         die;
         return $respond;
     }
