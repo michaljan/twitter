@@ -21,7 +21,7 @@ class TweetModel{
         }
         
         echo '<pre>';
-        print_r($date,$post);
+        var_dump($date,$post);
         die;
         return $respond;
     }
