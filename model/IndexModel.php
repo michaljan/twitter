@@ -25,6 +25,7 @@ class TweetModel{
         }
         var_dump($a);
         var_dump($b);
+        die;
         return $a< $b ? -1 : 1;
          };
         //var_dump($respond); 
