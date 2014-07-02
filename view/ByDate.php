@@ -45,7 +45,7 @@
                     <tbody>
                         <?php foreach($this->data as $value){
                                 foreach($value as $row){
-                                    echo $row['created'];
+                                    print_r($row);
                                 }
                         }
                         ?>
