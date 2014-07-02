@@ -44,7 +44,8 @@
                     </thead>
                     <tbody>
                         <?php foreach($this->data as $value){
-                               echo $value['created'][0].count($value);
+                                foreach($value as $key=>$row){
+                                    echo $row[$key];
                         }
                         ?>
                     </tbody>
