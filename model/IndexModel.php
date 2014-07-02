@@ -29,7 +29,7 @@ class TweetModel{
          };
         //var_dump($respond); 
         uasort($respond,'cmp');
-        var_dump($respond['created_at']);
+        var_dump($respond);
         echo '<pre>';
         die;
         return $respond;
