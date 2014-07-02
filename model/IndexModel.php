@@ -29,8 +29,9 @@ class TweetModel{
          };
         //var_dump($respond); 
         uasort($respond,'cmp');
-        var_dump($respond);
         echo '<pre>';
+        var_dump($respond);
+        
         die;
         return $respond;
     }
