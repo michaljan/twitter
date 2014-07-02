@@ -18,7 +18,7 @@ class TweetModel{
         //    $created[$key] = $row['created_at'];
         //    $text[$key] = $row['text'];
         //}
-        var_dump($json);
+        var_dump($respond);
         die;
         array_multisort($created, $text);
     }
