@@ -44,8 +44,9 @@
                     </thead>
                     <tbody>
                         <?php foreach($this->data as $value){
-     var_dump($value);
-                                echo '<tr><td>'.$key.'</td>'.'<td>'.$row['created'].'</td> <td>'.$row['created'].'</td></tr>';
+                                foreach($value as $row){
+                                    echo '<tr><td>'.$key.'</td>'.'<td>'.$row['created'].'</td> <td>'.$row['created'].'</td></tr>';
+                                }
                         }
                         ?>
                     </tbody>
