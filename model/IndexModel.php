@@ -18,6 +18,8 @@ class TweetModel{
             $created[$key] = $row['created_at'];
             $text[$key] = $row['text'];
         }
+        print_r($respond);
+        die;
         $data=array('created'=>$created,'text'=>$text);
         return $data;
     }
