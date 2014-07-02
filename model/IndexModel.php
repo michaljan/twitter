@@ -23,7 +23,9 @@ class TweetModel{
         if ($a == $b) {
             return 0;
         }
-        return var_dump($a)< var_dump($b) ? -1 : 1;
+        var_dump($a);
+        var_dump($b);
+        return $a< $b ? -1 : 1;
          };
         uksort($respond,'cmp');
         echo '<pre>';
@@ -31,12 +33,6 @@ class TweetModel{
         return $respond;
     }
     
-    function cmp($a, $b) {
-        if ($a == $b) {
-            return 0;
-        }
-        return ($a < $b) ? -1 : 1;
-    }
 
    
 
