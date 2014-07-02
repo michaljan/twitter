@@ -25,12 +25,11 @@ class TweetModel{
         if ($a == $b) {
             return 0;
         }
-        echo '<pre>';
-        die;
         return $a < $b ? -1 : 1;
          };
         //var_dump($respond); 
         uasort($respond,'cmp');
+        var_dump($respond['created_at']);
         echo '<pre>';
         die;
         return $respond;
