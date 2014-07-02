@@ -27,7 +27,7 @@ class TweetModel{
         }
         echo '<pre>';
         die;
-        return $a['created_at']< $b['created_at'] ? -1 : 1;
+        return $a < $b ? -1 : 1;
          };
         //var_dump($respond); 
         uasort($respond,'cmp');
