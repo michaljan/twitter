@@ -15,18 +15,29 @@ class TweetModel{
                 ->performRequest();
         $respond = json_decode($json,true);
         //asort($respond, "mySortByDate");
-        foreach($respond as $key=>$value){
-            $date[$key]=new DateTime($value['created_at']);
-            $post[$key]=$value['text'];
+        //foreach($respond as $key=>$value){
+        //    $date[$key]=new DateTime($value['created_at']);
+        //    $post[$key]=$value['text'];
+        //}
+        function cmp($a, $b) {
+        if ($a == $b) {
+            return 0;
         }
-        
+        return var_dump($a< $b) ? -1 : 1;
+         };
+        uksort($respond,'cmp');
         echo '<pre>';
-        var_dump($date,$post);
         die;
         return $respond;
     }
     
-    public function mySortByDate($val1,$val2){
-        return $val1['created_at']>$val2['created_at'];
+    function cmp($a, $b) {
+        if ($a == $b) {
+            return 0;
+        }
+        return ($a < $b) ? -1 : 1;
     }
+
+   
+
 }
