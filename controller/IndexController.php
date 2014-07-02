@@ -36,7 +36,7 @@ class ByDateController implements iController{
 		$data=$tweet->byDateAction($url,$method, $getfield);
                 $view=new View('./view/ByDate.php');
 		$this->view=$view;
-		$this->view->setData('byDate',$data);
+		$this->view->setData('data',$data);
 		return $this;
 	
 	}
