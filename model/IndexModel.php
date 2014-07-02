@@ -20,14 +20,14 @@ class TweetModel{
         //    $post[$key]=$value['text'];
         //}
         function cmp($a, $b) {
+        $a= new DateTime($a['created_at']);
+        $b= new DateTime($b['created_at']);
         if ($a == $b) {
             return 0;
         }
         echo '<pre>';
-        var_dump($a);
-        var_dump($b);
         die;
-        return $a< $b ? -1 : 1;
+        return $a['created_at']< $b['created_at'] ? -1 : 1;
          };
         //var_dump($respond); 
         uasort($respond,'cmp');
