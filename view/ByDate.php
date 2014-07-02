@@ -43,10 +43,8 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <?php foreach($this->data as $value){
-                                foreach($value as $key=>$row){
-                                    echo $row['crated'];
-                                }    
+                        <?php foreach($this->data['created'] as $value){
+                            echo $value;
                         }
                         ?>
                     </tbody>
