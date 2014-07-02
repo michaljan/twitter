@@ -45,7 +45,7 @@
                     <tbody>
                         <?php foreach($this->data as $value){
                                 foreach($value as $key=>$row){
-                                    echo $row[$key];
+                                    echo $row;
                                 }    
                         }
                         ?>
