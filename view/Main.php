@@ -32,7 +32,7 @@
 			<ul class="nav nav-pills nav-stacked">
 				<li class="active"><a href="./index.php?controller=MainController">Home</a></li>
 				<li><a href="./index.php?controller=ByDateController">Sort by date</a></li>
-				<li><a href="#">Messages</a></li>
+				<li><a href="./index.php?controller=ByLenController">Sort by length</a></li>
 			</ul>
 		</div>
 	</div>		

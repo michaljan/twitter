@@ -25,9 +25,30 @@ class TweetModel{
         if ($a == $b) {
             return 0;
         }
-        return $a < $b ? -1 : 1;
+        return $a > $b ? -1 : 1;
          };
         uasort($respond,'cmp');
+        return $respond;
+    }
+    public function byLenAction($url, $method, $getfield) {
+        $json = $this->twitter->setGetfield($getfield)
+                ->buildOauth($url, $method)
+                ->performRequest();
+        $respond = json_decode($json,true);
+        //asort($respond, "mySortByDate");
+        //foreach($respond as $key=>$value){
+        //    $date[$key]=new DateTime($value['created_at']);
+        //    $post[$key]=$value['text'];
+        //}
+        function cmpLen($a, $b) {
+        $a= strlen($a['text']);
+        $b= strlen($b['text']);
+        if ($a == $b) {
+            return 0;
+        }
+        return $a > $b ? -1 : 1;
+         };
+        uasort($respond,'cmplen');
         return $respond;
     }
     

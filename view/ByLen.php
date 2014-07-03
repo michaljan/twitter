@@ -28,11 +28,11 @@
  
   <body>
 	<div class="row">
-		<div class="col-md-4">
+		<div class="col-md-2">
 			<ul class="nav nav-pills nav-stacked">
 				<li><a href="./index.php?controller=MainController">Home</a></li>
-				<li class="active"><a href="./index.php?controller=ByDateController">Sort by date</a></li>
-				<li><a href="./index.php?controller=ByLenController">Sort by length</a></li>
+				<li><a href="./index.php?controller=ByDateController">Sort by date</a></li>
+				<li class="active"><a href="./index.php?controller=ByLenController">Sort by length</a></li>
 			</ul>
 		</div>
             <div class="col-md-6">
