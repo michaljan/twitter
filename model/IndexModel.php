@@ -62,8 +62,6 @@ class TweetModel{
             }
         }
         $data=array('link'=>$link,'nolink'=>$noLink);
-        echo '<pre>';
-        var_dump($data);
         die;
         return($data);
     }
