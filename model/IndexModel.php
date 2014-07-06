@@ -62,7 +62,6 @@ class TweetModel{
             }
         }
         $data=array('link'=>$link,'nolink'=>$noLink);
-        die;
         return($data);
     }
     
