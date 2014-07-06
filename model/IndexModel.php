@@ -52,6 +52,26 @@ class TweetModel{
         return $respond;
     }
     
+    public function linkCheckAction($url, $method, $getfield){
+        $json = $this->twitter->setGetfield($getfield)
+                ->buildOauth($url, $method)
+                ->performRequest();
+        $respond = json_decode($json,true);
+        foreach ($respond as $row){
+            $result=preg_match('@(?:http://)@', $subject);
+            if($result==true){
+                $link=$row;
+            }   
+            else{
+                $noLink=$row;
+            }
+        }
+        $data=array('link'=>$link,'nolink'=>$noLink);
+        var_dump($data);
+        die;
+        return($data);
+    }
+    
 
    
 
