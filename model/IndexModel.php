@@ -73,7 +73,7 @@ class TweetModel{
             $result=preg_match_all('@(#\w+)@', $row['text'],$matches);
             if($result==true){
                 $hashtagPost[]=$row;
-                $hashTags[]=$matches;
+                $hashTags[]=$matches[0];
             }   
         }
         $data=array('hashtagPost'=>$hashtagPost,'hashTags'=>$hashTags);
