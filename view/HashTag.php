@@ -68,8 +68,11 @@
                     <tbody>
                         <?php 
                             $i=1;
-                            foreach($this->data['data']['hashTags'][''] as $value){
-                                echo '<tr><td>'.$i.'<td>'.$value.'<td><tr>';
+                            foreach($this->data['data']['hashTags'] as $value){
+                                foreach($value as $record){
+                                    echo '<tr><td>'.$i.'<td>'.$record.'<td><tr>';
+                                }   
+                                 
                             $i++;
                             
                         }
