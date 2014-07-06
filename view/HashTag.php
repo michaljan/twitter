@@ -62,7 +62,7 @@
                 <h3>Has tags present</h3>
                     <thead>
                         <tr>
-                            <th>Related post no</th><th>Date</th><th>Post</th>
+                            <th>Related post no</th><th>HashTag</th>
                         </tr>
                     </thead>
                     <tbody>
