@@ -48,6 +48,7 @@ class TweetModel{
     }
     
     public function linkCheckAction($url, $method, $getfield){
+        $result='';
         $json = $this->twitter->setGetfield($getfield)
                 ->buildOauth($url, $method)
                 ->performRequest();
