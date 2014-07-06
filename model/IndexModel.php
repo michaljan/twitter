@@ -64,7 +64,7 @@ class TweetModel{
         $data=array('link'=>$link,'nolink'=>$noLink);
         return($data);
     }
-    public function HashTagAction($url, $method, $getfield){
+    public function hashTagAction($url, $method, $getfield){
         $json = $this->twitter->setGetfield($getfield)
                 ->buildOauth($url, $method)
                 ->performRequest();
