@@ -55,10 +55,10 @@ class TweetModel{
         foreach ($respond as $row){
             $result=preg_match('@(?:http://)@', $row['text']);
             if($result==true){
-                $link=$row;
+                $link[]=$row;
             }   
             else{
-                $noLink=$row;
+                $noLink[]=$row;
             }
         }
         $data=array('link'=>$link,'nolink'=>$noLink);
