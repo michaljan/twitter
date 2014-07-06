@@ -70,15 +70,16 @@ class TweetModel{
                 ->performRequest();
         $respond = json_decode($json,true);
         foreach ($respond as $row){
-            $result=preg_match('@(#\w+)@', $row['text']);
+            $result=preg_match_all('@(#\w+)@', $row['text'],$matches);
             if($result==true){
-                $link[]=$row;
+                $hashtagPost[]=$row;
+                $hashTags[]=$matches;
             }   
-            else{
-                $noLink[]=$row;
-            }
         }
-        $data=array('link'=>$link,'nolink'=>$noLink);
+        $data=array('hashtagPost'=>$hashtagPost,'hashTags'=>$hashTags);
+        echo '<pre>';
+        var_dump($data);
+        die;
         return($data);
     }
 
