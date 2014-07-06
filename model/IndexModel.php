@@ -14,14 +14,9 @@ class TweetModel{
                 ->buildOauth($url, $method)
                 ->performRequest();
         $respond = json_decode($json,true);
-        //asort($respond, "mySortByDate");
-        //foreach($respond as $key=>$value){
-        //    $date[$key]=new DateTime($value['created_at']);
-        //    $post[$key]=$value['text'];
-        //}
         function cmp($a, $b) {
-        $a= new DateTime($a['created_at']);
-        $b= new DateTime($b['created_at']);
+            $a= new DateTime($a['created_at']);
+            $b= new DateTime($b['created_at']);
         if ($a == $b) {
             return 0;
         }
