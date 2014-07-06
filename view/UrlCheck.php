@@ -49,6 +49,8 @@
                         <?php 
                             $i=1;
                             foreach($this->data['data']['link'] as $value){
+                                var_dump($value);
+                                die;
                                 echo '<tr><td>'.$i.'<td>'.$value['link']['created_at'].'<td>'.$value['link']['text'].'<td><tr>';
                             $i++;
                             echo '<pre>';
