@@ -34,7 +34,7 @@
 				<li class="active"><a href="./index.php?controller=ByDateController">Sort by date</a></li>
 				<li><a href="./index.php?controller=ByLenController">Sort by length</a></li>
                                 <li><a href="./index.php?controller=UrlCheckController">Check for url</a></li>
-                                <li><a href="./index.php?controller=HashTagController">Sort by length</a></li>
+                                <li><a href="./index.php?controller=HashTagController">Hash tags</a></li>
                                 
 			</ul>
 		</div>
