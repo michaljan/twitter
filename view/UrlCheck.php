@@ -48,10 +48,7 @@
                     <tbody>
                         <?php 
                             $i=1;
-                            foreach($this->data['data'] as $value){
-                                echo '<pre>';
-                                var_dump($this->data['data']['link']);
-                                die;
+                            foreach($this->data['data']['link'] as $value){
                                 echo '<tr><td>'.$i.'<td>'.$value['link']['created_at'].'<td>'.$value['link']['text'].'<td><tr>';
                             $i++;
                             echo '<pre>';
