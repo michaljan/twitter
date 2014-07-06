@@ -77,7 +77,7 @@ class UrlCheckController implements iController{
 		$method='GET';
                 $getfield='?screen_name=fabianwilliams&count=20';
 		$data=$tweet->linkCheckAction($url,$method, $getfield);
-                $view=new View('./view/ByLen.php');
+                $view=new View('./view/UrlCheck.php');
 		$this->view=$view;
 		$this->view->setData('data',$data);
 		return $this;
