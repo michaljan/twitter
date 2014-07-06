@@ -39,7 +39,7 @@
 			</ul>
 		</div>
             <div class="col-md-5">
-                <h3>Links </h3>
+                <h3>Posts with hashtags</h3>
                 <table class="table table-hover">
                     <thead>
                         <tr>
@@ -59,10 +59,10 @@
             </div>
             <div class="col-md-5">
             <table class="table table-hover">
-                <h3>No links</h3>
+                <h3>Has tags present</h3>
                     <thead>
                         <tr>
-                            <th>#</th><th>Date</th><th>Post</th>
+                            <th>Related post no</th><th>Date</th><th>Post</th>
                         </tr>
                     </thead>
                     <tbody>
