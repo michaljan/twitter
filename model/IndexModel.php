@@ -35,11 +35,6 @@ class TweetModel{
                 ->buildOauth($url, $method)
                 ->performRequest();
         $respond = json_decode($json,true);
-        //asort($respond, "mySortByDate");
-        //foreach($respond as $key=>$value){
-        //    $date[$key]=new DateTime($value['created_at']);
-        //    $post[$key]=$value['text'];
-        //}
         function cmpLen($a, $b) {
         $a= strlen($a['text']);
         $b= strlen($b['text']);
