@@ -88,3 +88,24 @@ class UrlCheckController implements iController{
 		return $this;
 	}
 }
+
+class HashTagController implements iController{
+	protected $request;
+	protected $connection;
+	public function execute($settings,$request){
+		$tweet=new TweetModel($settings);
+		$url = 'https://api.twitter.com/1.1/statuses/user_timeline.json';
+		$method='GET';
+                $getfield='?screen_name=fabianwilliams&count=20';
+		$data=$tweet->linkCheckAction($url,$method, $getfield);
+                $view=new View('./view/UrlCheck.php');
+		$this->view=$view;
+		$this->view->setData('data',$data);
+		return $this;
+	
+	}
+	public function render(){
+		$this->view->render();
+		return $this;
+	}
+}
