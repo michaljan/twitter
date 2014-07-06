@@ -28,7 +28,7 @@
  
   <body>
 	<div class="row">
-		<div class="col-md-4">
+		<div class="col-md-2">
 			<ul class="nav nav-pills nav-stacked">
 				<li><a href="./index.php?controller=MainController">Home</a></li>
 				<li><a href="./index.php?controller=ByDateController">Sort by date</a></li>
@@ -37,7 +37,8 @@
                                 
 			</ul>
 		</div>
-            <div class="col-md-6">
+            <div class="col-md-5">
+                <h3>Links </h3>
                 <table class="table table-hover">
                     <thead>
                         <tr>
@@ -47,7 +48,7 @@
                     <tbody>
                         <?php 
                             $i=1;
-                            foreach($this->data['data'] as $value){
+                            foreach($this->data['data']['link'] as $value){
                                 echo '<tr><td>'.$i.'<td>'.$value['created_at'].'<td>'.$value['text'].'<td><tr>';
                             $i++;
                             
@@ -56,6 +57,26 @@
                     </tbody>
                 </table>
             </div>
+            <div class="col-md-5">
+            <table class="table table-hover">
+                <h3>No links</h3>
+                    <thead>
+                        <tr>
+                            <th>#</th><th>Date</th><th>Post</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <?php 
+                            $i=1;
+                            foreach($this->data['data']['nolink'] as $value){
+                                echo '<tr><td>'.$i.'<td>'.$value['created_at'].'<td>'.$value['text'].'<td><tr>';
+                            $i++;
+                            
+                        }
+                        ?>
+                    </tbody>
+                </table>
+            </div>>
 	</div>		
   </body>
 </html>
