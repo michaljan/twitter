@@ -51,7 +51,7 @@
                             foreach($this->data['data']['link'] as $value){
                                 echo '<tr><td>'.$i.'<td>'.$value['created_at'].'<td>'.$value['text'].'<td><tr>';
                             $i++;
-                            
+                            var_dump($this->data); 
                         }
                         ?>
                     </tbody>
