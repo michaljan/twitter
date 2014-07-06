@@ -52,7 +52,7 @@
                                 echo '<tr><td>'.$i.'<td>'.$value['link']['created_at'].'<td>'.$value['link']['text'].'<td><tr>';
                             $i++;
                             echo '<pre>';
-                            var_dump($this->data['data']['link']);
+                            var_dump($this->data['data']['link']['text']);
                         }
                         ?>
                     </tbody>
