@@ -49,7 +49,7 @@
                     <tbody>
                         <?php 
                             $i=1;
-                            foreach($this->data['data']['link'] as $value){
+                            foreach($this->data['data']['hashtagPost'] as $value){
                                 echo '<tr><td>'.$i.'<td>'.$value['created_at'].'<td>'.$value['text'].'<td><tr>';
                             $i++;
                         }
@@ -68,8 +68,8 @@
                     <tbody>
                         <?php 
                             $i=1;
-                            foreach($this->data['data']['nolink'] as $value){
-                                echo '<tr><td>'.$i.'<td>'.$value['created_at'].'<td>'.$value['text'].'<td><tr>';
+                            foreach($this->data['data']['hashTags'] as $value){
+                                echo '<tr><td>'.$i.'<td>'.$value[].'<td><tr>';
                             $i++;
                             
                         }

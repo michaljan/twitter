@@ -77,9 +77,6 @@ class TweetModel{
             }   
         }
         $data=array('hashtagPost'=>$hashtagPost,'hashTags'=>$hashTags);
-        echo '<pre>';
-        var_dump($data['hashTags']);
-        die;
         return($data);
     }
 
