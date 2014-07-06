@@ -64,7 +64,23 @@ class TweetModel{
         $data=array('link'=>$link,'nolink'=>$noLink);
         return($data);
     }
-    
+    public function HashTagAction($url, $method, $getfield){
+        $json = $this->twitter->setGetfield($getfield)
+                ->buildOauth($url, $method)
+                ->performRequest();
+        $respond = json_decode($json,true);
+        foreach ($respond as $row){
+            $result=preg_match('@(#\w+)@', $row['text']);
+            if($result==true){
+                $link[]=$row;
+            }   
+            else{
+                $noLink[]=$row;
+            }
+        }
+        $data=array('link'=>$link,'nolink'=>$noLink);
+        return($data);
+    }
 
    
 
