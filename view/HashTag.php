@@ -69,7 +69,7 @@
                         <?php 
                             $i=1;
                             foreach($this->data['data']['hashTags'] as $value){
-                                echo '<tr><td>'.$i.'<td>'.$value[].'<td><tr>';
+                                echo '<tr><td>'.$i.'<td>'.$value.'<td><tr>';
                             $i++;
                             
                         }
