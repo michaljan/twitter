@@ -80,6 +80,7 @@ class UrlCheckController implements iController{
                 $view=new View('./view/UrlCheck.php');
 		$this->view=$view;
 		$this->view->setData('data',$data);
+                var_dump($view);
 		return $this;
 	
 	}
