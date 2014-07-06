@@ -48,7 +48,7 @@
                     <tbody>
                         <?php 
                             $i=1;
-                            foreach($this->data['data']['link'] as $value){
+                            foreach($this->data['data'] as $value){
                                 var_dump($value);
                                 die;
                                 echo '<tr><td>'.$i.'<td>'.$value['link']['created_at'].'<td>'.$value['link']['text'].'<td><tr>';
