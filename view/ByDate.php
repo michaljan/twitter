@@ -49,7 +49,8 @@
                         <?php 
                             $i=1;
                             foreach($this->data['data'] as $value){
-                                echo '<tr><td>'.$i.'<td>'.$value['created_at'].'<td>'.$value['text'].'<td><tr>';
+                                $date = new DateTime($value['created_at']);
+                                echo '<tr><td>'.$i.'<td>'.$date->format('Y-m-d H:i:s').'<td>'.$value['text'].'<td><tr>';
                             $i++;
                             
                         }
