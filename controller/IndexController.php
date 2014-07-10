@@ -2,22 +2,10 @@
 include_once('./view/View.php');
 include_once('./model/IndexModel.php');
 
-interface iController{
-	public function execute($setting,$request);
-	public function render();
-
-}
-
-
-class MainController implements iController{
+abstract class abstarctController{
 	protected $request;
 	protected $connection;
-	public function execute($settings,$request){
-		$view=new View('./view/Main.php');
-		$this->view=$view;
-		return $this;
-	
-	}
+        public abstract function execute($setting,$request);
 	public function render(){
 		$this->view->render();
 		return $this;
@@ -25,9 +13,17 @@ class MainController implements iController{
 
 }
 
-class ByDateController implements iController{
-	protected $request;
-	protected $connection;
+
+class MainController extends abstarctController{
+	public function execute($settings,$request){
+		$view=new View('./view/Main.php');
+		$this->view=$view;
+		return $this;
+	
+	}
+}
+
+class ByDateController extends abstarctController{
 	public function execute($settings,$request){
 		$tweet=new TweetModel($settings);
 		$url = 'https://api.twitter.com/1.1/statuses/user_timeline.json';
@@ -40,16 +36,11 @@ class ByDateController implements iController{
 		return $this;
 	
 	}
-	public function render(){
-		$this->view->render();
-		return $this;
-	}
+	
 
 }
 
-class ByLenController implements iController{
-	protected $request;
-	protected $connection;
+class ByLenController extends abstarctController{
 	public function execute($settings,$request){
 		$tweet=new TweetModel($settings);
 		$url = 'https://api.twitter.com/1.1/statuses/user_timeline.json';
@@ -62,15 +53,11 @@ class ByLenController implements iController{
 		return $this;
 	
 	}
-	public function render(){
-		$this->view->render();
-		return $this;
-	}
+	
 }
 
-class UrlCheckController implements iController{
-	protected $request;
-	protected $connection;
+class UrlCheckController extends abstarctController{
+	
 	public function execute($settings,$request){
 		$tweet=new TweetModel($settings);
 		$url = 'https://api.twitter.com/1.1/statuses/user_timeline.json';
@@ -83,15 +70,10 @@ class UrlCheckController implements iController{
 		return $this;
 	
 	}
-	public function render(){
-		$this->view->render();
-		return $this;
-	}
+	
 }
 
-class HashTagController implements iController{
-	protected $request;
-	protected $connection;
+class HashTagController extends abstarctController{
 	public function execute($settings,$request){
 		$tweet=new TweetModel($settings);
 		$url = 'https://api.twitter.com/1.1/statuses/user_timeline.json';
@@ -103,9 +85,5 @@ class HashTagController implements iController{
 		$this->view->setData('data',$data);
 		return $this;
 	
-	}
-	public function render(){
-		$this->view->render();
-		return $this;
 	}
 }
