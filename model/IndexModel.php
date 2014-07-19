@@ -1,6 +1,7 @@
 <?php
 require_once('./api/TwitterAPIExchange.php');
 abstract class ExecuteApi{
+    private $twitter;
     public function buildConnection($url, $method, $getfield){
         $json = $this->twitter->setGetfield($getfield)
                 ->buildOauth($url, $method)
@@ -11,7 +12,6 @@ abstract class ExecuteApi{
 
 
 class TweetModel extends ExecuteApi{
-    private $twitter;
     public function __construct($settings) {
         $twitter = new TwitterAPIExchange($settings);
         $this->twitter=$twitter;
