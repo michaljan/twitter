@@ -1,7 +1,16 @@
 <?php
 require_once('./api/TwitterAPIExchange.php');
+abstract class ExecuteApi{
+    public function buildConnection($url, $method, $getfield){
+        $json = $this->twitter->setGetfield($getfield)
+                ->buildOauth($url, $method)
+                ->performRequest();
+        return $respond = json_decode($json,true);
+    }
+}
 
-class TweetModel{
+
+class TweetModel extends ExecuteApi{
     private $twitter;
     public function __construct($settings) {
         $twitter = new TwitterAPIExchange($settings);
@@ -9,11 +18,7 @@ class TweetModel{
         return $this;
     }
 
-    public function byDateAction($url, $method, $getfield) {
-        $json = $this->twitter->setGetfield($getfield)
-                ->buildOauth($url, $method)
-                ->performRequest();
-        $respond = json_decode($json,true);
+    public function byDateAction() {
         function cmp($a, $b) {
             $a= new DateTime($a['created_at']);
             $b= new DateTime($b['created_at']);
@@ -25,11 +30,7 @@ class TweetModel{
         uasort($respond,'cmp');
         return $respond;
     }
-    public function byLenAction($url, $method, $getfield) {
-        $json = $this->twitter->setGetfield($getfield)
-                ->buildOauth($url, $method)
-                ->performRequest();
-        $respond = json_decode($json,true);
+    public function byLenAction() {
         function cmpLen($a, $b) {
         $a= strlen($a['text']);
         $b= strlen($b['text']);
@@ -43,10 +44,6 @@ class TweetModel{
     }
     
     public function linkCheckAction($url, $method, $getfield){
-        $json = $this->twitter->setGetfield($getfield)
-                ->buildOauth($url, $method)
-                ->performRequest();
-        $respond = json_decode($json,true);
         foreach ($respond as $row){
             $result=preg_match('@(?:http://)@', $row['text']);
             if($result==true){
@@ -57,13 +54,9 @@ class TweetModel{
             }
         }
         $data=array('link'=>$link,'nolink'=>$noLink);
-        return($data);
+        return $data;
     }
     public function hashTagAction($url, $method, $getfield){
-        $json = $this->twitter->setGetfield($getfield)
-                ->buildOauth($url, $method)
-                ->performRequest();
-        $respond = json_decode($json,true);
         foreach ($respond as $row){
             $result=preg_match_all('@(#\w+)@', $row['text'],$matches);
             if($result==true){
@@ -72,7 +65,7 @@ class TweetModel{
             }   
         }
         $data=array('hashtagPost'=>$hashtagPost,'hashTags'=>$hashTags);
-        return($data);
+        return $data;
     }
 
    
