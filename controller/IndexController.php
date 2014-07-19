@@ -29,7 +29,7 @@ class ByDateController extends abstarctController{
 		$url = 'https://api.twitter.com/1.1/statuses/user_timeline.json';
 		$method='GET';
                 $getfield='?screen_name=fabianwilliams&count=20';
-		$data=$tweet->byDateAction($url,$method, $getfield);
+		$data=$tweet->buildConnection($url,$method, $getfield);
                 $view=new View('./view/ByDate.php');
 		$this->view=$view;
 		$this->view->setData('data',$data);
@@ -46,7 +46,7 @@ class ByLenController extends abstarctController{
 		$url = 'https://api.twitter.com/1.1/statuses/user_timeline.json';
 		$method='GET';
                 $getfield='?screen_name=fabianwilliams&count=20';
-		$data=$tweet->byLenAction($url,$method, $getfield);
+		$data=$tweet->buildConnection($url,$method, $getfield);
                 $view=new View('./view/ByLen.php');
 		$this->view=$view;
 		$this->view->setData('data',$data);
@@ -63,7 +63,7 @@ class UrlCheckController extends abstarctController{
 		$url = 'https://api.twitter.com/1.1/statuses/user_timeline.json';
 		$method='GET';
                 $getfield='?screen_name=fabianwilliams&count=20';
-		$data=$tweet->linkCheckAction($url,$method, $getfield);
+		$data=$tweet->buildConnection($url,$method, $getfield);
                 $view=new View('./view/UrlCheck.php');
 		$this->view=$view;
 		$this->view->setData('data',$data);
@@ -79,7 +79,7 @@ class HashTagController extends abstarctController{
 		$url = 'https://api.twitter.com/1.1/statuses/user_timeline.json';
 		$method='GET';
                 $getfield='?screen_name=fabianwilliams&count=20';
-		$data=$tweet->hashTagAction($url,$method, $getfield);
+		$data=$tweet->buildConnection($url,$method, $getfield);
                 $view=new View('./view/HashTag.php');
 		$this->view=$view;
 		$this->view->setData('data',$data);
