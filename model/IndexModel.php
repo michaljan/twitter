@@ -1,6 +1,11 @@
 <?php
 require_once('./api/TwitterAPIExchange.php');
 abstract class ExecuteApi{
+    public function __construct($settings) {
+        $twitter = new TwitterAPIExchange($settings);
+        $this->twitter=$twitter;
+        return $this;
+    }
     private $twitter;
     public function buildConnection($url, $method, $getfield){
         $json = $this->twitter->setGetfield($getfield)
@@ -12,12 +17,6 @@ abstract class ExecuteApi{
 
 
 class TweetModel extends ExecuteApi{
-    public function __construct($settings) {
-        $twitter = new TwitterAPIExchange($settings);
-        $this->twitter=$twitter;
-        return $this;
-    }
-
     public function byDateAction() {
         function cmp($a, $b) {
             $a= new DateTime($a['created_at']);
