@@ -53,16 +53,20 @@
                     Please write a PHP solution, which can do following:
                 </p>
                 <ol type="1">
-                    1. Download the last 20 tweets from a twitter account, using the Twitter API
-                    2. 
-                    a) Order the tweets by the date and time that they have been published.
-                    b) Order the tweets by its length.
-                    3.
-                    a) Filter whether or not a tweet contains a link.
-                    b) Filter whether or not a tweet contains multiple hash tags.
-                    4. Show all used hash tags used in the tweets.
-                    5. Supply Example run code that will show how your program is called.
-                </ol>
+                    <li>Download the last 20 tweets from a twitter account, using the Twitter API</li>
+                    <li></li> 
+                    <ol type="2">
+                        <li>Order the tweets by the date and time that they have been published.</li>
+                        <li>Order the tweets by its length.</li>
+                    </ol>
+                    <li></li>
+                        <ol type="2">    
+                        <li>Filter whether or not a tweet contains a link.</li>
+                        <li>Filter whether or not a tweet contains multiple hash tags.</li>
+                    </ol>
+                        <li>Show all used hash tags used in the tweets.</li>
+                        <li>Supply Example run code that will show how your program is called.</li>
+                    </ol>
             </div>
 	</div>		
   </body>
