@@ -44,30 +44,25 @@
                     uses API provided by James Mallison which can be found on
                     <a link="http://github.com/j7mbo/twitter-api-php"> http://github.com/j7mbo/twitter-api-php/ </a> website. 
                 </p>
-                <p>Below you can find specifications for the task provided by one of the employers for the Junior PHP position interview
-                    
-                This technical test is intended to demonstrate your PHP skills when solving a simple task.
-
-The priority for the test is to demonstrate the quality of your code, not to implement all features necessarily.
-
-If you wish to leave comments for us within the code to explain your reasoning or thought process, then please do.
-
-Please write a PHP solution, which can do following:
-
-1. Download the last 20 tweets from a twitter account, using the Twitter API
-
-2. a) Order the tweets by the date and time that they have been published.
-
-b) Order the tweets by its length.
-
-3. a) Filter whether or not a tweet contains a link.
-
-b) Filter whether or not a tweet contains multiple hash tags.
-
-4. Show all used hash tags used in the tweets.
-
-5. Supply Example run code that will show how your program is called. 
+                <p>Below you can find specifications for the task provided by one of the employers for the Junior PHP position interview 
+                    I have applied in the past:</P>
+                <p>
+                    This technical test is intended to demonstrate your PHP skills when solving a simple task.
+                    The priority for the test is to demonstrate the quality of your code, not to implement all features necessarily.
+                    If you wish to leave comments for us within the code to explain your reasoning or thought process, then please do.
+                    Please write a PHP solution, which can do following:
                 </p>
+                <ol type="1">
+                    1. Download the last 20 tweets from a twitter account, using the Twitter API
+                    2. 
+                    a) Order the tweets by the date and time that they have been published.
+                    b) Order the tweets by its length.
+                    3.
+                    a) Filter whether or not a tweet contains a link.
+                    b) Filter whether or not a tweet contains multiple hash tags.
+                    4. Show all used hash tags used in the tweets.
+                    5. Supply Example run code that will show how your program is called.
+                </ol>
             </div>
 	</div>		
   </body>
