@@ -39,8 +39,8 @@
 		</div>
             <div class="col-md-2">
                 <h3>Twitter API project</h3>
-                <p>This project is puerilely for the demonstration purposes. Based on MVC framework which you can find on http://mxmelite.com 
-                uses API provided by James Mallison which can be found on http://github.com/j7mbo/twitter-api-php website. 
+                <p>This project is puerilely for the demonstration purposes. Based on MVC framework which you can find on <link> http://mxmelite.com</link> 
+                    uses API provided by James Mallison which can be found on <link>http://github.com/j7mbo/twitter-api-php</link> website. 
                 </p>
             </div>
 	</div>		
