@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="TWITTER TASK">
+    <meta name="description" content="Ttter API example">
     <meta name="author" content="Michal Janicki">
     <link rel="shortcut icon" href="../../assets/ico/favicon.ico">
 	<!-- Latest compiled and minified CSS -->
@@ -42,7 +42,7 @@
                 <p>This project is puerilely for the demonstration purposes. Based on MVC framework which you can find on
                     <a href=" http://mxmelite.com"> http://mxmelite.com</a> 
                     uses API provided by James Mallison which can be found on
-                    <a link="http://github.com/j7mbo/twitter-api-php"> http://github.com/j7mbo/twitter-api-php </a> website. 
+                    <a link="http://github.com/j7mbo/twitter-api-php"> http://github.com/j7mbo/twitter-api-php/ </a> website. 
                 </p>
             </div>
 	</div>		
