@@ -55,12 +55,12 @@
                 <ol type="1">
                     <li>Download the last 20 tweets from a twitter account, using the Twitter API</li>
                     <li></li> 
-                    <ol type="2">
+                    <ol type="a">
                         <li>Order the tweets by the date and time that they have been published.</li>
                         <li>Order the tweets by its length.</li>
                     </ol>
                     <li></li>
-                        <ol type="2">    
+                        <ol type="a">    
                         <li>Filter whether or not a tweet contains a link.</li>
                         <li>Filter whether or not a tweet contains multiple hash tags.</li>
                     </ol>
