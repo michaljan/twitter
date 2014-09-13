@@ -37,12 +37,12 @@
                                 <li><a href="./index.php?controller=HashTagController">Hash tags</a></li>
 			</ul>
 		</div>
-            <div class="col-md-2">
+            <div class="col-md-6">
                 <h3>Twitter API project</h3>
                 <p>This project is puerilely for the demonstration purposes. Based on MVC framework which you can find on
                     <a href=" http://mxmelite.com"> http://mxmelite.com</a> 
                     uses API provided by James Mallison which can be found on
-                    <a link="http://github.com/j7mbo/twitter-api-php">http://github.com/j7mbo/twitter-api-php</a> website. 
+                    <a link="http://github.com/j7mbo/twitter-api-php"> http://github.com/j7mbo/twitter-api-php </a> website. 
                 </p>
             </div>
 	</div>		
